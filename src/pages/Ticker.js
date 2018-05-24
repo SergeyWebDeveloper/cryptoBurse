@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {fetchTicker} from '../actions/index';
 import {Spin} from 'antd';
 import TickerItem from '../components/TickerItem';
 
-class Ticker extends Component {
+class Ticker extends PureComponent {
 
 	componentDidMount() {
 		this.props.fetchTicker();
